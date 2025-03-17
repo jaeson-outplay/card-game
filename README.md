@@ -162,6 +162,29 @@ The API server provides the following endpoints:
 - `POST /api/collections/:id/cards`: Add a card to a collection
 - `DELETE /api/collections/:id/cards/:cardId`: Remove a card from a collection
 
+## GitHub Pages Deployment
+
+This project includes a card viewer that can be deployed on GitHub Pages. The viewer allows you to browse your cards and collections from any web browser.
+
+### Features
+
+- View all cards in your database
+- Filter cards by collection
+- Pagination for large card sets
+- View detailed card data in JSON format
+- Responsive design for mobile and desktop
+
+### Deployment
+
+See the [DEPLOYMENT.md](DEPLOYMENT.md) guide for detailed instructions on how to deploy both the API server and the GitHub Pages card viewer.
+
+### Usage
+
+1. Deploy your API server (see deployment guide)
+2. Access your card viewer at `https://yourusername.github.io/Card-Game/`
+3. Enter the URL of your API server
+4. Browse your cards and collections
+
 ## License
 
 MIT 
