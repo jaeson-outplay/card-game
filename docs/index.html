@@ -296,8 +296,8 @@
         currentPage = 1;
         currentCollection = '';
         collectionSelect.value = '';
-        loadCollections();
-        fetchCards();
+        loadCollections(API_URL);
+        fetchCards(API_URL);
       });
       
       // Modal close button
@@ -314,7 +314,8 @@
     });
     
     // Fetch cards from API
-    async function fetchCards() {
+    async function fetchCards(API_URL) {
+      console.log(API_URL);
       if (!API_URL) {
         loadingElement.textContent = 'Enter your API URL and click Connect to load cards';
         return;
@@ -353,7 +354,8 @@
     }
     
     // Fetch collections from API
-    async function loadCollections() {
+    async function loadCollections(API_URL) {
+      console.log(API_URL);
       if (!API_URL) return;
       
       try {
