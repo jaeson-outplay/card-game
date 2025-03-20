@@ -118,6 +118,28 @@ There are two ways to view your cards:
 
 2. **Collection Manager**: Open `src/assets/data/samples/collection_manager.html` in your browser to manage your card collections.
 
+## Card Generation
+
+### Local Card Generation
+
+To generate cards locally with AI-generated images:
+
+```bash
+# Generate a minion card
+node src/tools/createCardWithImage.js --name="Fire Elemental" --type="minion" --cost=5 --attack=5 --health=5 --description="Battlecry: Deal 3 damage to any target." --flavorText="The essence of fire, given form and purpose." --rarity="rare"
+
+# Generate a spell card
+node src/tools/createCardWithImage.js --name="Fireball" --type="spell" --cost=4 --description="Deal 6 damage." --flavorText="This spell is useful for burning things." --rarity="common"
+```
+
+For more details, see the [Card Generation Guide](card_generation_guide.md).
+
+### Remote Card Generation
+
+If you've deployed your API to a remote server (such as Render), you can create cards with images using a script that interacts with your remote API. This is useful for maintaining your production database.
+
+For detailed instructions, see the [Remote Card Generation Guide](remote_card_generation_guide.md).
+
 ## Database Structure
 
 The MongoDB database contains the following collections:
