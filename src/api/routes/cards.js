@@ -6,6 +6,14 @@ const fs = require('fs');
 const { generateCardImage } = require('../utils/imageGenerator');
 const hfImageGenerator = require('../utils/huggingfaceImageGenerator');
 
+// Handle OPTIONS request for CORS preflight
+router.options('/', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.sendStatus(200);
+});
+
 // Get all cards
 router.get('/', async (req, res) => {
   try {
